@@ -101,4 +101,26 @@ public class SistemaJavaLar {
 		}
 	}
 
+	public void colisaoComBug() {
+		for (Planetas planetas : planetas) {
+			for (Bug bug : listaBugs) {
+				if(planetas.posicaoX == bug.posicaoX && planetas.posicaoY == bug.posicaoY) {
+					planetas.velocidade = planetas.velocidade + bug.getAlteradorDeVelocidadeBug();
+					System.out.println("O planeta" + planetas + "se chocou com um bug e teve sua velocidade reduzida em um");
+				}
+			}
+		}
+	}
+	
+	public void colisaoComDev() {
+		for (Planetas planetas : planetas) {
+			for (Dev dev : listaDevs) {
+				if(planetas.posicaoX == dev.posicaoX && planetas.posicaoY == dev.posicaoY) {
+					planetas.velocidade = planetas.velocidade + dev.getAlteradorDeVelocidadeDev();
+					System.out.println("O planeta" + planetas + "se chocou com um dev e teve sua velocidade aumentada em um");
+				}
+			}
+		}
+	}
+
 }
