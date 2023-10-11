@@ -36,14 +36,6 @@ public class SistemaJavaLar {
 		quantidadeDeDevs = leitor.nextInt();
 	}
 
-	public void planoCriacao() {
-		for (posicaoX = 0; posicaoX < plano.getComprimento(); posicaoX++) {
-			for (posicaoY = 0; posicaoY < plano.getAltura(); posicaoY++) {
-				plano.getCelulas()[posicaoX][posicaoY] = new Celula(posicaoX, posicaoY, null);
-			}
-		}
-	}
-
 	public void atribuirPlaneta(Planetas planeta) {
 		for (int i = 0; i < plano.getComprimento(); i++) {
 			for (int j = 0; j < plano.getAltura(); j++) {
